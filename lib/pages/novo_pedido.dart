@@ -75,6 +75,8 @@ class _NovoPedidoPageState extends State<NovoPedidoPage> {
   Tamanho? _tamanho;
   int _fatias = 8;
 
+  List<Tamanho> _tamanhos = [];
+
   int _totalSlices() {
     if (_sections.isEmpty) return 0;
     return _sections.map((e) => e.pieces).reduce((a, b) => a + b);
@@ -91,6 +93,11 @@ class _NovoPedidoPageState extends State<NovoPedidoPage> {
   void initState() {
     super.initState();
     SchedulerBinding.instance.addPostFrameCallback((timeStamp) async {
+      final tams = await PizzaService.listTamanhos();
+      setState(() {
+        _tamanhos = tams;
+      });
+      
       if (widget.preset != null) {
         for (final sabor in widget.preset!.sabores) {
           _sections.add(PizzaSection(flavor: sabor.sabor!, pieces: sabor.fatias));
@@ -177,32 +184,22 @@ class _NovoPedidoPageState extends State<NovoPedidoPage> {
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: FutureBuilder<List<Tamanho>>(
-                      future: PizzaService.listTamanhos(),
-                      builder: (_, snap) {
-                        if (snap.connectionState != ConnectionState.done) {
-                          return const Center(child: CircularProgressIndicator());
-                        }
-
-                        final data = snap.data ?? [];
-                        return Wrap(
-                          spacing: 8.0,
-                          runSpacing: 8.0,
-                          alignment: WrapAlignment.center,
-                          children: data.map((tam) => SelectableButton(
-                            text: tam.descricao,
-                            underText: '(${fmtp.format(tam.tamanho)} cm)',
-                            selected: _tamanho != null && _tamanho!.cod == tam.cod,
-                            onTap: () {
-                              setState(() {
-                                _tamanho = tam;
-                                _fatias = _tamanho!.fatias.reduce(min);
-                                _ajustaFatias();
-                              });
-                            },
-                          )).toList(),
-                        );
-                      },
+                    child: Wrap(
+                      spacing: 8.0,
+                      runSpacing: 8.0,
+                      alignment: WrapAlignment.center,
+                      children: _tamanhos.map((tam) => SelectableButton(
+                        text: tam.descricao,
+                        underText: '(${fmtp.format(tam.tamanho)} cm)',
+                        selected: _tamanho != null && _tamanho!.cod == tam.cod,
+                        onTap: () {
+                          setState(() {
+                            _tamanho = tam;
+                            _fatias = _tamanho!.fatias.reduce(min);
+                            _ajustaFatias();
+                          });
+                        },
+                      )).toList(),
                     ),
                   ),
                 ),
