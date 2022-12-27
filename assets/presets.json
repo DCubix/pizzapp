@@ -1,0 +1,44 @@
+[
+  {
+    "nome": "Queridinha",
+    "fatias": 8,
+    "tamanho": "grande",
+    "sabores": [
+      { "id": 2, "fatias": 4 },
+      { "id": 10, "fatias": 4 }
+    ],
+    "desconto": 5.0
+  },
+  {
+    "nome": "Mamma Mia!",
+    "fatias": 8,
+    "tamanho": "grande",
+    "sabores": [
+      { "id": 7, "fatias": 4 },
+      { "id": 5, "fatias": 4 }
+    ],
+    "desconto": 12.0
+  },
+  {
+    "nome": "Quarteto Fantástico",
+    "fatias": 4,
+    "tamanho": "familia",
+    "sabores": [
+      { "id": 1, "fatias": 1 },
+      { "id": 2, "fatias": 1 },
+      { "id": 3, "fatias": 1 },
+      { "id": 8, "fatias": 1 }
+    ],
+    "desconto": 30.0
+  },
+  {
+    "nome": "Grande Família",
+    "fatias": 12,
+    "tamanho": "colossal",
+    "sabores": [
+      { "id": 2, "fatias": 6 },
+      { "id": 3, "fatias": 6 }
+    ],
+    "desconto": 40.0
+  }
+]

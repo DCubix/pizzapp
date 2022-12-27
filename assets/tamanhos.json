@@ -1,0 +1,32 @@
+[
+  {
+    "cod": "broto",
+    "descricao": "Brotinho",
+    "tamanho": 18.0,
+    "fatias": [ 1, 2, 3 ]
+  },
+  {
+    "cod": "media",
+    "descricao": "Média",
+    "tamanho": 25.0,
+    "fatias": [ 1, 2, 3, 4, 5, 6 ]
+  },
+  {
+    "cod": "grande",
+    "descricao": "Grande",
+    "tamanho": 35.0,
+    "fatias": [ 1, 2, 3, 4, 5, 6, 8, 10 ]
+  },
+  {
+    "cod": "familia",
+    "descricao": "Famíia",
+    "tamanho": 60.0,
+    "fatias": [ 1, 2, 3, 4, 5, 6, 8, 10, 12 ]
+  },
+  {
+    "cod": "colossal",
+    "descricao": "Colossal",
+    "tamanho": 120.0,
+    "fatias": [ 1, 2, 3, 4, 5, 6, 8, 10, 12, 16 ]
+  }
+]

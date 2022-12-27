@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "nome": "Bacon",
+    "ingredientes": ["Bacon em cubos", "Milho verde", "Mussarela", "Orégano"],
+    "valor": 46.9,
+    "desconto": 5.0,
+    "imagem": "bacon.png"
+  },
+  {
+    "id": 2,
+    "nome": "Calabresa",
+    "ingredientes": ["Calabresa fatiada", "Cebola em rodelas", "Mussarela", "Orégano", "Azeite de oliva"],
+    "valor": 42.9,
+    "desconto": 5.0,
+    "imagem": "calabresa.png"
+  },
+  {
+    "id": 3,
+    "nome": "Frango",
+    "ingredientes": ["Tiras de frango", "Ovo cozido", "Mussarela", "Requeijão"],
+    "valor": 44.9,
+    "desconto": 5.0,
+    "imagem": "frango.png"
+  },
+  {
+    "id": 4,
+    "nome": "Lombo Canadense",
+    "ingredientes": ["Lombo canadense fatiado", "Mussarela", "Orégano"],
+    "valor": 52.9,
+    "imagem": "lombo.png"
+  },
+  {
+    "id": 5,
+    "nome": "Marguerita",
+    "ingredientes": ["Mussarela", "Tomate fatiado", "Pimenta do reino", "Folhas de manjericão", "Azeite de oliva"],
+    "valor": 61.9,
+    "desconto": 10.0,
+    "imagem": "marguerita.png"
+  },
+  {
+    "id": 6,
+    "nome": "Mussarela",
+    "ingredientes": ["Mussarela", "Azeite de oliva"],
+    "valor": 35.9,
+    "imagem": "mussarela.png"
+  },
+  {
+    "id": 7,
+    "nome": "Pepperoni",
+    "ingredientes": ["Pepperoni fatiado", "Mussarela", "Azeite de oliva"],
+    "valor": 43.7,
+    "imagem": "pepperoni.png"
+  },
+  {
+    "id": 8,
+    "nome": "Portuguesa",
+    "ingredientes": ["Presunto", "Mussarela", "Azeitona preta", "Ovo cozido", "Cebola em rodelas"],
+    "valor": 38.5,
+    "imagem": "portuguesa.png"
+  },
+  {
+    "id": 9,
+    "nome": "Rúcula",
+    "ingredientes": ["Mussarela", "Folhas de rúcula", "Tomates secos", "Orégano"],
+    "valor": 43.5,
+    "imagem": "rucula.png"
+  },
+  {
+    "id": 10,
+    "nome": "Strogonoff",
+    "ingredientes": ["Mussarela", "Strogonoff de filé mignon", "Batata palha"],
+    "valor": 40.9,
+    "imagem": "strogonoff.png"
+  }
+]
